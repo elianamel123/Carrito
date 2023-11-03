@@ -35,7 +35,7 @@ include ("include/menu.php");
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Razón Social: </label>
-                                <input type="Emai" name="razon" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="text" name="razon" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
