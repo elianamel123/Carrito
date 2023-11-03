@@ -30,7 +30,7 @@ include ("include/menu.php");
                           
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Código: </label>
-                                <input type="text" name="codigp" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                                <input type="number" name="codigp" class="form-control col-lg-4 col-md-4 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
@@ -45,7 +45,7 @@ include ("include/menu.php");
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Precio Venta: </label>
-                                <input type="text" name="Precio_Venta" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                                <input type="number" name="Precio_Venta" class="form-control col-lg-4 col-md-4 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
