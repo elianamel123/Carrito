@@ -36,7 +36,7 @@ include ("include/menu.php");
 
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Ruc y/o Dni: </label>
-                                <input type="number" name="ruc" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                                <input type="number" name="ruc_dni" class="form-control col-lg-4 col-md-4 col-sm-12" 
                                 required>
                             </div>
                            
@@ -57,12 +57,12 @@ include ("include/menu.php");
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Dirección: </label>
-                                <input type="text" name="direc" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="text" name="direccion" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Dirección Envío: </label>
-                                <input type="text" name="direc" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="text" name="direccion_envio" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                      

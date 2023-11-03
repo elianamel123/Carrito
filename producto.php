@@ -35,37 +35,37 @@ include ("include/menu.php");
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Descripción: </label>
-                                <input type="text" name="email" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="text" name="Descripcion" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Detalle: </label>
-                                <input type="number" name="telefono" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="number" name="Detalle" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Precio Wenta: </label>
-                                <input type="text" name="direc" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                                <label class="col-lg-3 col-md-3 col-sm-12"> Precio Venta: </label>
+                                <input type="text" name="Precio_Venta" class="form-control col-lg-4 col-md-4 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Stock: </label>
-                                <input type="text" name="direc" class="form-control col-lg-9 col-md-9 col-sm-12" 
+                                <input type="text" name="Stock" class="form-control col-lg-9 col-md-9 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Estado (Activo): </label>
-                                <input type="text" name="direc" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                                <input type="text" name="Estado" class="form-control col-lg-4 col-md-4 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Imagen: </label>
-                                <input type="file" name="direc" class="form-control col-lg-4 col-md-5 col-sm-12" 
+                                <input type="file" name="Imagen" class="form-control col-lg-4 col-md-5 col-sm-12" 
                                 required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Precio Compra:</label>
-                                <input type="number" name="fecha" class="form-control col-lg-4 col-md-4 col-sm-12" >
+                                <input type="number" name="Precio_Compra" class="form-control col-lg-4 col-md-4 col-sm-12" >
                             </div>
 
                             <div class="form-group row">
