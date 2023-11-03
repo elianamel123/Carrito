@@ -1,3 +1,10 @@
+<?php 
+include ("include/conexion.php");
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,7 @@ include ("include/menu.php");
                     <h4 class="">Categprias de Productos</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_usuario.php" method="POST">
+                        <form action="Operaciones/categoria.php" method="POST">
                           
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Nombres: </label>
