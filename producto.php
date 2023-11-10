@@ -26,7 +26,7 @@ include ("include/menu.php");
                     <h4 class="">Registro de Productos</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_usuario.php" method="POST">
+                        <form action="Operaciones/registrar_usuario.php" method="POST" enctype="multipart/form-data">
                           
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Código: </label>
@@ -61,7 +61,7 @@ include ("include/menu.php");
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Imagen: </label>
                                 <input type="file" name="Imagen" class="form-control col-lg-4 col-md-5 col-sm-12" 
-                                required>
+                                require accept="image/*">
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Precio Compra:</label>
