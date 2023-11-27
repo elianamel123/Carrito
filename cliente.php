@@ -32,7 +32,7 @@ include ("include/menu.php");
                     <h4 class="">Registro de Cliente</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_cliente.php" method="POST">
+                        <form action="Operaciones/registrar_cliente.php" method="POST" >
 
                             <div class="form-group row">
                                 <label class="col-lg-3 col-md-3 col-sm-12"> Ruc y/o Dni: </label>

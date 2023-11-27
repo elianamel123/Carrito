@@ -1,5 +1,5 @@
 <?php
-include ("../include/conexion.php");
+include("../include/conexion.php");
 
 //recibir informacion
 $ruc = $_POST["ruc"];
@@ -9,8 +9,14 @@ $telefono = $_POST["telefono"];
 $direccion = $_POST["direc"];
 $Pago = $_POST["pago"];
 
+echo $ruc. "<br>";
+echo $Razon_Social. "<br>";
+echo $email. "<br>";
+echo $telefono. "<br>";
+echo $direccion. "<br>";
+echo $Pago. "<br>";
 
-$consulta  = "INSERT INTO proveedor (ruc, razon_social, correo, telefono,direccion, metodo_pago	) VALUES ('$ruc','$Razon_Social','$email','$telefono ,'$direccion','$Pago')";
+$consulta  = "INSERT INTO proveedor(ruc,razon_social,correo,telefono,direccion,metodo_pago) VALUES ('$ruc','$Razon_Social','$email','$telefono' ,'$direccion','$Pago')";
 
 $ejecutar = mysqli_query($conexion,$consulta);
 if ($ejecutar) {
