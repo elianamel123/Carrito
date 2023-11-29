@@ -23,41 +23,55 @@ include ("include/menu.php");
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <?php include("include/modal_venta.php"); ?>
                     <h4 class="">Registro de Ventas</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_usuario.php" method="POST">
-                         
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Serie de Venta: </label>
-                                <input type="text" name="serie" class="form-control col-lg-6 col-md-6 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Número de Venta: </label>
-                                <input type="number" name="num" class="form-control col-lg-6 col-md-6 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Fecha Venta: </label>
-                                <input type="date" name="fecha" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Monto Total: </label>
-                                <input type="number" name="monto" class="form-control col-lg-6 col-md-6 col-sm-12" 
-                                required>
-                            </div>
-                           
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Id:</th>
+                                        <th>Serie Venta:</th>
+                                        <th>Numero de Venta:</th>
+                                        <th>Fecha y Hora de Venta:</th>
+                                        <th>Monto Total:</th>
+                                        <th>Id Cliente</th>
+                                        <th>Id Usuario:</th>
+                                        
+                                    </tr>
+                                    <?php
+                                        $consulta ="SELECT * FROM ventas";
+                                        $ejecutar =mysqli_query($conexion,$consulta);
+                                        $contador =0;
+                                        while ($respuesta =mysqli_fetch_array($ejecutar)) {
+                                            # code...
+                                            $contador += 1;
+                                            echo "<tr>";
+                                            echo "<td>".$contador."</td>";
+                                            echo "<td>".$respuesta['serie_venta']."</td>";
+                                            echo "<td>".$respuesta['numero_venta']."</td>";
+                                            echo "<td>".$respuesta['fecha_hora_venta']."</td>";
+                                            echo "<td>".$respuesta['monto_total']."</td>";
+                                            echo "<td>".$respuesta['id_cliente']."</td>";
+                                            echo "<td>".$respuesta['id_usuario']."</td>";
+                                            
+        
+                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
+                                            echo "</tr>";
+                                        }
+                                        
+                                        
+                                        ?>
 
-                            <div class="form-group row">
-                            <label class="col-lg-3 col-md-3 col-sm-12"></label>
-                                <button type="submit" class="btn btn-success">Guardar
+                                </thead>
+                                <tbody>
 
-                                </button>
+                             
 
-                            </div>
-                        </form>
+                                </tbody>
+                            </table> 
+                       
                         </div>
                   
                     </div>

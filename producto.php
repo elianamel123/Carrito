@@ -1,3 +1,8 @@
+<?php 
+include ("include/conexion.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,58 +28,61 @@ include ("include/menu.php");
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <?php include("include/modal_reg_prod.php"); ?>
                     <h4 class="">Registro de Productos</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_producto.php" method="POST" enctype="multipart/form-data">
-                          
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Código: </label>
-                                <input type="number" name="codigp" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Descripción: </label>
-                                <input type="text" name="Descripcion" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Detalle: </label>
-                                <input type="text" name="Detalle" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Precio Venta: </label>
-                                <input type="number" name="Precio_Venta" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Stock: </label>
-                                <input type="number" name="Stock" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Estado (Activo): </label>
-                                <input type="number" name="Estado" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Imagen: </label>
-                                <input type="file" name="foto" class="form-control col-lg-4 col-md-5 col-sm-12" require accept="image/*">
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Precio Compra:</label>
-                                <input type="number" name="Precio_Compra" class="form-control col-lg-4 col-md-4 col-sm-12" >
-                            </div>
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Num:</th>
+                                        <th>Codigo:</th>
+                                        <th>Descripción:</th>
+                                        <th>Detalle:</th>
+                                        <th>Precio Compra:</th>
+                                        <th>Precio Venta:</th>
+                                        <th>Stock:</th>
+                                        <th>Estado Activo:</th>
+                                        <th>Imagen:</th>
+                                    </tr>
 
-                            <div class="form-group row">
-                            <label class="col-lg-3 col-md-3 col-sm-12"></label>
-                                <button type="submit" class="btn btn-success">Guardar
+                                    <?php
+                                        $consulta ="SELECT * FROM producto";
+                                        $ejecutar =mysqli_query($conexion,$consulta);
+                                        $contador =0;
+                                        while ($respuesta =mysqli_fetch_array($ejecutar)) {
+                                            # code...
+                                            $contador += 1;
+                                            echo "<tr>";
+                                            echo "<td>".$contador."</td>";
+                                            echo "<td>".$respuesta['codigo']."</td>";
+                                            echo "<td>".$respuesta['descripcion']."</td>";
+                                            echo "<td>".$respuesta['detalle']."</td>";
+                                            echo "<td>".$respuesta['precio_compra']."</td>";
+                                            echo "<td>".$respuesta['precio_venta']."</td>";
+                                            echo "<td>".$respuesta['stock']."</td>";
+                                            echo "<td>".$respuesta['estado']."</td>";
+                                            echo "<td>".$respuesta['imagen']."</td>";
+                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
+                                            echo "</tr>";
+                                        }
+                                        
+                                        
+                                        ?>
 
-                                </button>
+                                   
+                              
+                              
 
-                            </div>
-                        </form>
+                                </thead>
+                                <tbody>
+
+                             
+
+                                </tbody>
+                            </table>
+                        
                         </div>
                   
                     </div>

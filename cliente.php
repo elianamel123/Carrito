@@ -29,52 +29,57 @@ include ("include/menu.php");
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <?php include("include/modal_reg_cli.php"); ?>
                     <h4 class="">Registro de Cliente</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_cliente.php" method="POST" >
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Num:</th>
+                                        <th>Ruc:</th>
+                                        <th>Razon Social:</th>
+                                        <th>Telefono:</th>
+                                        <th>Correo:</th>
+                                        <th>Direccióm</th>
+                                        <th>Direccióm Envio</th>
+                                    </tr>
+                                    <?php
+                                        $consulta ="SELECT * FROM cliente";
+                                        $ejecutar =mysqli_query($conexion,$consulta);
+                                        $contador =0;
+                                        while ($respuesta =mysqli_fetch_array($ejecutar)) {
+                                            # code...
+                                            $contador += 1;
+                                            echo "<tr>";
+                                            echo "<td>".$contador."</td>";
+                                            echo "<td>".$respuesta['ruc_dni']."</td>";
+                                            echo "<td>".$respuesta['razon_social']."</td>";
+                                            echo "<td>".$respuesta['telefono']."</td>";
+                                            echo "<td>".$respuesta['correo']."</td>";
+                                            echo "<td>".$respuesta['direccion']."</td>";
+                                            echo "<td>".$respuesta['direccion_envio']."</td>";
+                                           
+                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
+                                            echo "</tr>";
+                                        }
+                                        
+                                        
+                                        ?>
 
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Ruc y/o Dni: </label>
-                                <input type="number" name="ruc_dni" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                           
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Razón Social: </label>
-                                <input type="text" name="razon" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Telefono: </label>
-                                <input type="number" name="telefono" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Correo: </label>
-                                <input type="Email" name="correo" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Dirección: </label>
-                                <input type="text" name="direccion" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Dirección Envío: </label>
-                                <input type="text" name="direccion_envio" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                     
+                         
 
-                            <div class="form-group row">
-                            <label class="col-lg-3 col-md-3 col-sm-12"></label>
-                                <button type="submit" class="btn btn-success">Guardar
+                                </thead>
+                                <tbody>
 
-                                </button>
+                             
 
-                            </div>
-                        </form>
+                                </tbody>
+                            </table>
+                   
+
+
                         </div>
                   
                     </div>

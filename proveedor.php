@@ -28,50 +28,56 @@ include ("include/menu.php");
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <?php include("include/modal_reg_prov.php"); ?>
                     <h4 class="">Registro de Proveedores</h4>
                     <div class="card">
                         <div class="card-body">
-                        <form action="Operaciones/registrar_provedor.php" method="POST">
+                        <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Num:</th>
+                                        <th>RUC:</th>
+                                        <th>Razon Social:</th>
+                                        <th>Email:</th>
+                                        <th>Telefono:</th>
+                                        <th>Direccióm:</th>
+                                        <th>Medio de Pago:</th>
+                                        
+                                    </tr>
+                                    <?php
+                                        $consulta ="SELECT * FROM proveedor";
+                                        $ejecutar =mysqli_query($conexion,$consulta);
+                                        $contador =0;
+                                        while ($respuesta =mysqli_fetch_array($ejecutar)) {
+                                            # code...
+                                            $contador += 1;
+                                            echo "<tr>";
+                                            echo "<td>".$contador."</td>";
+                                            echo "<td>".$respuesta['ruc']."</td>";
+                                            echo "<td>".$respuesta['razon_social']."</td>";
+                                            echo "<td>".$respuesta['correo']."</td>";
+                                            echo "<td>".$respuesta['telefono']."</td>";
+                                            echo "<td>".$respuesta['direccion']."</td>";
+                                            echo "<td>".$respuesta['metodo_pago']."</td>";
+                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
+                                            echo "</tr>";
+                                        }
+                                        
+                                        
+                                        ?>
+                              
+                              
+
+                                </thead>
+                                <tbody>
+
+                             
+
+                                </tbody>
+                            </table>
                         
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> RUC: </label>
-                                <input type="number" name="ruc" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Razón Social: </label>
-                                <input type="text" name="razon" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Email: </label>
-                                <input type="Email" name="email" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Telefono: </label>
-                                <input type="number" name="telefono" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Dirección: </label>
-                                <input type="text" name="direc" class="form-control col-lg-9 col-md-9 col-sm-12" 
-                                required>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-md-3 col-sm-12"> Medio de Pago: </label>
-                                <input type="text" name="pago" class="form-control col-lg-4 col-md-4 col-sm-12" >
-                            </div>
-                         
 
-                            <div class="form-group row">
-                            <label class="col-lg-3 col-md-3 col-sm-12"></label>
-                                <button type="submit" class="btn btn-success">Guardar
-
-                                </button>
-
-                            </div>
-                        </form>
                         </div>
                   
                     </div>
