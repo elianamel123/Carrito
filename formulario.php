@@ -52,7 +52,10 @@ include ("include/menu.php");
                                         <th>Rol:</th>
                                         <th>Acciones:</th>
                                     </tr>
-                                    <?php
+                                   
+                                </thead>
+                                <tbody>
+                                <?php
                                         $consulta ="SELECT * FROM usuario";
                                         $ejecutar =mysqli_query($conexion,$consulta);
                                         $contador =0;
@@ -69,7 +72,8 @@ include ("include/menu.php");
                                             echo "<td>".$respuesta['direccion']."</td>";
                                             echo "<td>".$respuesta['activo']."</td>";
                                             echo "<td>".$respuesta['id_rol']."</td>";
-                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
+                                            echo "<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
                                             
                                             echo "</tr>";
                                         }
@@ -77,8 +81,6 @@ include ("include/menu.php");
                                         
                                         ?>
 
-                                </thead>
-                                <tbody>
 
                              
 

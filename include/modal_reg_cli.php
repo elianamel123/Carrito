@@ -1,7 +1,7 @@
-<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".registrar">+ Nuevo</button>
+<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".registrar_cliente">+ Nuevo</button>
 
 
-<div class="modal fade registrar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade registrar_cliente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     
         <div class="modal-dialog modal-lg">
             <div class="modal-content">

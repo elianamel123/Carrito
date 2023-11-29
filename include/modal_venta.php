@@ -12,11 +12,11 @@
             </button>
             </div>
             <div class="modal-body">
-            <form action="Operaciones/registrar_venta.php" method="POST">
+            <form action="Operaciones/registro_venta.php" method="POST">
                          
                          <div class="form-group row">
                              <label class="col-lg-3 col-md-3 col-sm-12"> Serie de Venta: </label>
-                             <input type="text" name="serie" class="form-control col-lg-6 col-md-6 col-sm-12" 
+                             <input type="number" name="serie" class="form-control col-lg-6 col-md-6 col-sm-12" 
                              required>
                          </div>
                          <div class="form-group row">
@@ -25,15 +25,16 @@
                              required>
                          </div>
                          <div class="form-group row">
-                             <label class="col-lg-3 col-md-3 col-sm-12"> Fecha Venta: </label>
-                             <input type="date" name="fecha" class="form-control col-lg-4 col-md-4 col-sm-12" 
-                             required>
-                         </div>
-                         <div class="form-group row">
                              <label class="col-lg-3 col-md-3 col-sm-12"> Monto Total: </label>
                              <input type="number" name="monto" class="form-control col-lg-6 col-md-6 col-sm-12" 
                              required>
                          </div>
+                         <div class="form-group row">
+                             <label class="col-lg-3 col-md-3 col-sm-12"> Fecha Venta: </label>
+                             <input type="date" name="fecha" class="form-control col-lg-4 col-md-4 col-sm-12" 
+                             required>
+                         </div>
+                     
                         
 
                          <div class="form-group row">

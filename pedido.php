@@ -38,7 +38,6 @@ include ("include/menu.php");
                                         <th>Id:</th>
                                         <th>Id Cliente:</th>
                                         <th>Fecha/Hora pedido:</th>
-                                        <th>Apellidos  y Nombre:</th>
                                         <th>Fecha Entreda:</th>
                                         <th>Metodo Pago</th>
                                         <th>Monto:</th>
@@ -62,7 +61,7 @@ include ("include/menu.php");
                                             echo "<td>".$respuesta['comprobante']."</td>";
                                             echo "<td>".$respuesta['estado']."</td>";
         
-                                            echo "<td><button class='btn bnt-success'>Editar</button><button class='btn btn-success'</td>";
+                                            
                                             
                                             echo "</tr>";
                                         }
@@ -97,6 +96,7 @@ include ("include/menu.php");
     <script src="plantilla/Admin/vertical/assets/js/metismenu.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/waves.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/simplebar.min.js"></script>
+    
 
     <!-- App js -->
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
