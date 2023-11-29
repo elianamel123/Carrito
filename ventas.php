@@ -1,3 +1,8 @@
+<?php 
+include ("include/conexion.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +35,7 @@ include ("include/menu.php");
                         <table id="basic-datatable" class="table dt-responsive nowrap">
                                 <thead>
                                     <tr>
+                                        <th>Num:</th>
                                         <th>Id:</th>
                                         <th>Serie Venta:</th>
                                         <th>Numero de Venta:</th>
@@ -38,6 +44,7 @@ include ("include/menu.php");
                                         <th>Id Cliente</th>
                                         <th>Id Usuario:</th>
                                         
+                                        <th>Acciones:</th>
                                     </tr>
                                     <?php
                                         $consulta ="SELECT * FROM ventas";
@@ -48,6 +55,7 @@ include ("include/menu.php");
                                             $contador += 1;
                                             echo "<tr>";
                                             echo "<td>".$contador."</td>";
+                                            echo "<td>".$respuesta['id']."</td>";
                                             echo "<td>".$respuesta['serie_venta']."</td>";
                                             echo "<td>".$respuesta['numero_venta']."</td>";
                                             echo "<td>".$respuesta['fecha_hora_venta']."</td>";
