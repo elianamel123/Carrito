@@ -50,11 +50,16 @@
                         <label class="col-lg-3 col-md-3 col-sm-12"> Stock: </label>
                         <input type="number" name="Stock" class="form-control col-lg-9 col-md-9 col-sm-12" required>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 col-md-3 col-sm-12"> Estado (Activo): </label>
-                        <input type="number" name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                  
 
+                    <div class="form-group row">
+                    <label class="col-lg-3 col-md-3 col-sm-12"> Estado: </label>
+                        <select type="number"  name="estado" class="form-control col-lg-4 col-md-4 col-sm-12">
+                            <option value="1">1</option>
+                            <option value="0">0</option>
+                        </select>
                     </div>
+
                     <div class="form-group row">
                         <label class="col-lg-3 col-md-3 col-sm-12"> Imagen: </label>
                         <input type="file" name="foto" class="form-control col-lg-4 col-md-5 col-sm-12" require accept="image/*">
