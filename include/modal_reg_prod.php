@@ -55,8 +55,8 @@
                     <div class="form-group row">
                     <label class="col-lg-3 col-md-3 col-sm-12"> Estado: </label>
                         <select type="number"  name="estado" class="form-control col-lg-4 col-md-4 col-sm-12">
-                            <option value="1">1</option>
-                            <option value="0">0</option>
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
                         </select>
                     </div>
 
