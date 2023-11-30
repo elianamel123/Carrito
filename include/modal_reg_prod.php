@@ -65,14 +65,14 @@
                         <input type="file" name="foto" class="form-control col-lg-4 col-md-5 col-sm-12" require accept="image/*">
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-md-3 col-sm-12"> Id Usuario: </label>
-                        <select name="id_usuario" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                        <label class="col-lg-3 col-md-3 col-sm-12">id_proveedor: </label>
+                        <select name="id_provedor" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
                             <option value=""></option>
                             <?php
-                            $b_usuario = "SELECT * FROM usuario";
-                            $r_b_usuario = mysqli_query($conexion, $b_usuario);
-                            while ($datos_usuario = mysqli_fetch_array($r_b_usuario)) { ?>
-                                <option value="<?php echo $datos_usuario["id"]; ?>"><?php echo $datos_usuario["dni"]; ?></option>
+                            $b_provedor = "SELECT * FROM proveedor";
+                            $r_b_provedor = mysqli_query($conexion, $b_provedor);
+                            while ($datos_provedor = mysqli_fetch_array($r_b_provedor)) { ?>
+                                <option value="<?php echo $datos_provedor["id"]; ?>"><?php echo $datos_provedor["ruc"]; ?></option>
                             <?php } ?>
                         </select>
                     </div>
