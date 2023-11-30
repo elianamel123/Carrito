@@ -51,7 +51,7 @@ include ("include/menu.php");
                                         <th>Stock:</th>
                                         <th>Estado Activo:</th>
                                         <th>Imagen:</th>
-                                        <th>Id Usuario:</th>
+                                        <th>Id Proveedor:</th>
 
                                         <th>Acciones:</th>
                                     </tr>
