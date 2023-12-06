@@ -34,7 +34,8 @@ include ("include/menu.php");
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                <?php include("include/modal_venta.php"); ?>
+                    <a href="venta.php" class="btn btn-info"> ++ Nuevo</a>
+                
                     <h4 class="">Registro de Ventas</h4>
                     <div class="card">
                         <div class="card-body">
