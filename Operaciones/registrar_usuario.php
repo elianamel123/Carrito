@@ -19,7 +19,7 @@ $id_rol = $_POST["rol"];
 //echo $fecha. "<br>";
 
 $nombre_archivo = $dni.".jpg";
-$ruta_foto = "../img_usuarios/".$nombre_archivo;
+$ruta_foto = "../img_usuario/".$nombre_archivo;
 
 $pass_secure = password_hash($dni, PASSWORD_DEFAULT);
 
