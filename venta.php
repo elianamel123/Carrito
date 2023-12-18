@@ -67,18 +67,23 @@ $_SESSION ['productos'] = array();
 
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-md-2 col-sm-12"> Apellidos y Nombres: </label>
-                                                <input type="text" name="nombre" class="form-control col-lg-6 col-md-6 col-sm-12" readonly>
+                                                <div id="cliente_datos" class=" col-lg-6 col-md-6 col-sm-12">
+                                                    <input type="text" class="form-control col-lg-6 col-md-6 col-sm-12" readonly>
+                                                </div>
 
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-md-2 col-sm-12"> Usuario: </label>
-                                                <select name="usuario" id="usuario" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                                <select name="usuario" id="usuario" class="form-control col-lg-6 col-md-6 col-sm-12">
                                                     <option value=""></option>
-                                                    <option value="1">Usuario 1</option>
-                                                    <option value="2">Usuario 2</option>
-                                                    <option value="3">Usuario 3</option>
+                                                    <?php
+                                                    $consulta = "SELECT * FROM usuario";
+                                                    $ejecutar = mysqli_query($conexion, $consulta);
+                                                    while ($usuario = mysqli_fetch_array($ejecutar)) {
+                                                        echo '<option value="'.$usuario['id'].'">'.$usuario['apellidos_nombres'].'</option>';
+                                                    }
 
-
+                                                    ?>
                                                 </select>
 
 
@@ -101,6 +106,10 @@ $_SESSION ['productos'] = array();
 
 
                                             </div>
+                                            <div class="form-group row">
+                                                <button type="submit" class="btn btn-danger">Registrar Venta</button>
+                                            </div>
+
 
 
                                         </form>
@@ -130,7 +139,7 @@ $_SESSION ['productos'] = array();
                                                     $consulta = "SELECT * FROM producto WHERE id=$key";
                                                     $ejecutar = mysqli_query($conexion,$consulta);
                                                     $producto = mysqli_fetch_array($ejecutar);
-                                                    # code...
+                                                
                                                 
                                                 
                                                 ?>
@@ -205,21 +214,53 @@ $_SESSION ['productos'] = array();
             var codigo = $('#producto').val();
             $.ajax({
                 type: "POST",
-                url: "operaciones/agregar_producto.php",
+                url: "Operaciones/agregar_producto.php",
                 data:{cod:codigo},
                 success: function(r){
                     $('#contenido_tabla').html(r);
 
                 }
             })
+            document.getElementById('producto').value = '';
 
 
         };
-        function actualizar_cantidad(id){
-
+        function actualizar_cantidad(id) {
+            var cantidad = $('#cantidad_' + id).val();
+            $.ajax({
+                type: "POST",
+                url: "Operaciones/actualizar_cantidad.php",
+                data: {
+                    id_p: id,
+                    cant: cantidad
+                },
+                success: function(r) {
+                    $('#contenido_tabla').html(r);
+                }
+            })
         };
+
+        
         function eliminar_producto(id){
+            
+            
+            
 
+
+        };
+
+        function buscar_cliente() {
+            var dni = $('#dni_cliente').val();
+            $.ajax({
+                type: "POST",
+                url: "Operaciones/buscar_cliente.php",
+                data: {
+                    dni_c: dni
+                },
+                success: function(r) {
+                    $('#cliente_datos').html(r);
+                }
+            })
         };
     </script>
 

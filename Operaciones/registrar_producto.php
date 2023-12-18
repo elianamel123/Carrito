@@ -13,7 +13,7 @@ $estado = $_POST["estado"];
 $Id_provedor = $_POST["id_provedor"];
 //
 $nombre_archivo = $codigo.".jpg";
-$ruta_foto = "../img_usuario/".$nombre_archivo;
+$ruta_foto = "../img_producto/".$nombre_archivo;
 
 
 echo $codigo. "<br>";
