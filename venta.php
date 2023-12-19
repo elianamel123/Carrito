@@ -91,7 +91,7 @@ $_SESSION['productos'] = array();
                                                 </label>
                                             </div>
                                             <div class="form-group row">
-                                                <button type="submit" class="btn btn-danger">Registrar Venta</button>
+                                                <button type="submit" class="btn btn-info">Registrar Venta</button>
                                             </div>
                                         </form>
                                     </div>
