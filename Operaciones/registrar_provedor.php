@@ -24,4 +24,5 @@ if ($ejecutar) {
 }else {
     echo "Error en el Registro";
 }
+
 ?>

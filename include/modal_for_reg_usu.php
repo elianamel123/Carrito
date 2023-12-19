@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title h4" id="myLargeModalLabel">Large modal</h5>
+                <h5 class="modal-title h4" id="myLargeModalLabel">For - Usu</h5>
                 <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

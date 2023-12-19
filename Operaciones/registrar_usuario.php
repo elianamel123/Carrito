@@ -42,4 +42,5 @@ if (move_uploaded_file($_FILES['foto']['tmp_name'], $ruta_foto)) {
 
 
 
+
 ?>
